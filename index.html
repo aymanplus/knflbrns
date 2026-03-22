@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="كنافة البرنس — كنافة طازجة بمذاق ملكي في المدينة المنورة. تشكيلة متنوعة من الكنافة الفاخرة بالقشطة والنوتلا واللوتس والبستاشيو والكندر. توصيل سريع.">
+    <title>كنافة البرنس 👑 | النكهة الملكية للكنافة الطازجة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="crown">👑</span> كنافة البرنس
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#about">عن البرنس</a></li>
+                <li><a href="#menu">القائمة</a></li>
+                <li><a href="#features">مميزاتنا</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-crown-icon">👑</div>
+            <h1 class="hero-title shimmer-text">كنافة البرنس</h1>
+            <p class="hero-subtitle">النكهة الملكية للكنافة الطازجة</p>
+            <p class="hero-tagline">كنافة طازجة تُحضّر أمامك بمكونات فاخرة ومذاق لا يُضاهى</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-gold">اطلع على القائمة</a>
+                <a href="https://wa.me/966503996554" class="btn btn-outline" target="_blank">اطلب الآن <i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">4.5</span>
+                    <span class="stat-label">⭐ تقييم</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">121</span>
+                    <span class="stat-label">تقييم عملاء</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">+10</span>
+                    <span class="stat-label">نكهة مميزة</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT SECTION ====== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="ribbon-banner">
+                    <span>عن كنافة البرنس</span>
+                </div>
+                <p class="section-subtitle">حكاية مذاق ملكي</p>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <h3>كنافة طازجة يومياً... ليست مجمدة أبداً</h3>
+                    <p>
+                        في <strong>كنافة البرنس</strong>، نؤمن أن الكنافة الحقيقية تبدأ من طزاجتها. لذلك نحضّر كل قطعة بعناية ملكية أمام أعينكم، 
+                        بمكونات فاخرة مختارة بعناية لنقدم لكم تجربة مذاق لا تُنسى. من القشطة الطرية إلى البستاشيو الفاخر، ومن النوتلا الغنية 
+                        إلى لمسة اللوتس المميزة — كل نكهة تحكي قصة من التميز.
+                    </p>
+                    <p>
+                        نفتخر بخدمة أهل المدينة المنورة من موقعنا على طريق الجامعات، ونوصل لباب بيتك بسرعة وأمان.
+                    </p>
+                </div>
+                <div class="about-features">
+                    <div class="about-feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h4>جودة عالية</h4>
+                        <p>مكونات فاخرة مختارة بعناية</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <h4>طازجة يومياً</h4>
+                        <p>تُحضَّر أمامك لحظة بلحظة</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h4>توصيل سريع</h4>
+                        <p>نوصل لباب بيتك</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h4>4.5 تقييم</h4>
+                        <p>ثقة أكثر من 121 عميل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== MENU SECTION ====== -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="ribbon-banner">
+                    <span>قائمة الطعام</span>
+                </div>
+                <p class="section-subtitle">اختر نكهتك المفضلة</p>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs reveal">
+                <button class="menu-tab active" data-tab="round">🔵 كنافة دائرية</button>
+                <button class="menu-tab" data-tab="heart">❤️ شكل قلب</button>
+                <button class="menu-tab" data-tab="rect">📦 مستطيلة</button>
+                <button class="menu-tab" data-tab="mini">🧁 ميني</button>
+                <button class="menu-tab" data-tab="signature">✨ سجنتشر</button>
+                <button class="menu-tab" data-tab="mabrouma">🌀 مبرومة</button>
+                <button class="menu-tab" data-tab="drinks">☕ مشروبات</button>
+            </div>
+
+            <!-- Round Kunafa -->
+            <div class="menu-panel active" id="panel-round">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>🔵 كنافة دائرية</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th>الصنف</th>
+                                    <th>صغير</th>
+                                    <th>وسط</th>
+                                    <th>كبير</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>كنافة قشطة</td><td>15</td><td>30</td><td>40</td></tr>
+                                <tr><td>كنافة قشطة مكس</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة نوتلا</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة لوتس</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة بستاشيو</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة كندر</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة شوكلاته بيضاء</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr><td>كنافة قشطة أوريو</td><td>17</td><td>35</td><td>45</td></tr>
+                                <tr class="special-row"><td>كنافة البرنس الخاص 👑</td><td>17</td><td>40</td><td>50</td></tr>
+                                <tr class="special-row"><td>كنافة من اختيارك</td><td>17</td><td>40</td><td>50</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heart Shape -->
+            <div class="menu-panel" id="panel-heart">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>❤️ كنافة شكل قلب</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>السعر</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>شكل قلب قشطة</td><td>30</td></tr>
+                                <tr><td>شكل قلب مكس</td><td>35</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rectangular -->
+            <div class="menu-panel" id="panel-rect">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>📦 كنافة مستطيلة</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>صغير</th><th>وسط</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>مستطيلة قشطة</td><td>12</td><td>18</td></tr>
+                                <tr><td>مستطيلة مكس</td><td>14</td><td>20</td></tr>
+                                <tr><td>مستطيلة البرنس الخاص 👑</td><td>15</td><td>20</td></tr>
+                                <tr><td>مستطيلة من اختيارك</td><td>15</td><td>20</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini -->
+            <div class="menu-panel" id="panel-mini">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>🧁 كنافة ميني</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>السعر</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>ميني كنافة 6 حبات قشطة</td><td>30</td></tr>
+                                <tr><td>ميني كنافة 12 حبة قشطة</td><td>55</td></tr>
+                                <tr><td>ميني كنافة 6 حبات مكس</td><td>36</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signature -->
+            <div class="menu-panel" id="panel-signature">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>✨ سجنتشر كنافة البرنس</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>السعر</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>سجنتشر مكس</td><td>8</td></tr>
+                                <tr><td>سجنتشر البرنس الخاص 👑</td><td>8</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mabrouma -->
+            <div class="menu-panel" id="panel-mabrouma">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>🌀 مبرومة</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>السعر</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>مبرومة (صغير)</td><td>20</td></tr>
+                                <tr><td>مبرومة (كبير)</td><td>50</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-panel" id="panel-drinks">
+                <div class="menu-card reveal">
+                    <div class="menu-card-header">
+                        <h3>☕ مشروبات ساخنة</h3>
+                    </div>
+                    <div class="menu-table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>الصنف</th><th>السعر</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>مشروب عربي</td><td>15</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="menu-card-footer">
+                        <span class="currency-note">جميع الأسعار بالريال السعودي (ر.س)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FEATURES SECTION ====== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="ribbon-banner">
+                    <span>لماذا كنافة البرنس؟</span>
+                </div>
+                <p class="section-subtitle">ما يميزنا عن غيرنا</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon">🔥</div>
+                    <h3>كنافة طازجة</h3>
+                    <p>تُحضَّر أمامك وليست مجمدة أبداً. كل قطعة تُصنع بعناية لتصل إليك بأفضل جودة ومذاق.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon">🎨</div>
+                    <h3>تنوع النكهات</h3>
+                    <p>نوتلا، لوتس، بستاشيو، كندر، أوريو، شوكلاتة بيضاء وأكثر. نكهة لكل ذوق ومزاج.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon">🚚</div>
+                    <h3>توصيل سريع</h3>
+                    <p>نوصل لباب بيتك في أسرع وقت. تواصل معنا واطلب كنافتك المفضلة الآن.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon">👑</div>
+                    <h3>الجودة الملكية</h3>
+                    <p>مكونات فاخرة ومذاق لا يُضاهى. نقدم لكم تجربة ملكية من أول لقمة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS SECTION ====== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="ribbon-banner">
+                    <span>آراء عملائنا</span>
+                </div>
+                <p class="section-subtitle">ماذا يقول عملاؤنا عنا</p>
+            </div>
+            <div class="rating-overview reveal">
+                <div class="rating-big">
+                    <span class="rating-number">4.5</span>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-count">من 121 تقييم</span>
+                </div>
+            </div>
+            <div class="testimonials-carousel reveal">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"كنافة البرنس… مو مجرد حلى، هذي لحظة سعادة تذوب في الفم ✨ قرمشة ذهبية، وطعم يخليك تبتسم من أول لقمة. إذا للحلا عنوان… فهو كنافة البرنس 👑"</p>
+                        <div class="testimonial-author">— A ꨄ</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"كنافه لها طعم لذيذ جدا. كل الوصفات ممتازه وطعم مقرمش وتعاملهم جدا ممتاز"</p>
+                        <div class="testimonial-author">— ابراهيم محمد</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"جربت الكنافة بالقشطة وجربت مكس الكندر والبستاشيو. بصراحه لذيذ مره والتوصيل سريع. يعني ولا غلطه يارب تستمرو"</p>
+                        <div class="testimonial-author">— Hassan</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"محل ممتاز ونظيف. الجميل انها تصنع بالمحل طازجه وليس مفرزنات تاتي للمحل مثل المحال الاخرى. جرّبوها واحكموا"</p>
+                        <div class="testimonial-author">— ابو عمار</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"ماشاء الله تبارك. اطيب كنافه ذقته وتعامل الموظفين راقي وسعرهم حلو مره على الجودة العالية"</p>
+                        <div class="testimonial-author">— سلطان</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"ماشاءالله عليهم. الكنافة بستاشيو بالكندر لذيذة واسعارهم مناسبة وتوصيلهم سريع نص ساعه وحضر عندي"</p>
+                        <div class="testimonial-author">— Reemas</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="carouselPrev"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="carouselNext"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT SECTION ====== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="ribbon-banner">
+                    <span>تواصل معنا</span>
+                </div>
+                <p class="section-subtitle">نسعد بخدمتك</p>
+            </div>
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>اتصل بنا</h4>
+                        <a href="tel:+966503996554" dir="ltr">0503996554</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>واتساب</h4>
+                        <a href="https://wa.me/966503996554" target="_blank">تواصل عبر واتساب</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                        <h4>انستقرام</h4>
+                        <a href="https://www.instagram.com/knflbrns/" target="_blank">@knflbrns</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-snapchat-ghost"></i></div>
+                        <h4>سناب شات</h4>
+                        <a href="https://www.snapchat.com/add/knflbrns" target="_blank">@knflbrns</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>العنوان</h4>
+                        <p>طريق الجامعات، ورقان<br>المدينة المنورة 42399</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <h4>ساعات العمل</h4>
+                        <p>يومياً: ١:٠٠م – ١٢:٠٠ص</p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925.5!2d39.5264965!3d24.3804478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdc7dfcb53e123%3A0xe61e73de76103121!2z2YPZhtin2YHYqSDYp9mE2KjYsdmG2LM!5e0!3m2!1sar!2ssa!4v1700000000000"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><span class="crown">👑</span> كنافة البرنس</h3>
+                    <p>النكهة الملكية للكنافة الطازجة</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#about">عن البرنس</a></li>
+                        <li><a href="#menu">القائمة</a></li>
+                        <li><a href="#testimonials">آراء العملاء</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>تابعنا</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/knflbrns/" target="_blank" aria-label="انستقرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/knflbrns" target="_blank" aria-label="سناب شات"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://wa.me/966503996554" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2025 كنافة البرنس 👑</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== FLOATING WHATSAPP BUTTON ====== -->
+    <a href="https://wa.me/966503996554" class="whatsapp-float" target="_blank" aria-label="تواصل واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
