@@ -689,6 +689,12 @@ img {
     aspect-ratio: 1 / 1;
     border: 1px solid var(--border-gold);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-item:active {
+    transform: scale(0.98);
+    opacity: 0.9;
 }
 
 .gallery-item:nth-child(1) {
