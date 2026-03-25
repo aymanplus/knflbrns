@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initNavbar();
     initMenuTabs();
+    initGallery(); // Added gallery initialization
     initCarousel();
     initRevealAnimations();
     initSmoothScroll();
@@ -302,3 +303,119 @@ function initSmoothScroll() {
         });
     });
 }
+
+/* ============================================================
+   GALLERY LIGHTBOX
+   ============================================================ */
+function initGallery() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+
+    if (!lightbox) return;
+
+    let currentIndex = 0;
+    const images = Array.from(galleryItems).map(item => ({
+        src: item.querySelector('img').src,
+        caption: item.dataset.caption
+    }));
+
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    }
+
+    function updateLightbox() {
+        if (!images[currentIndex]) return;
+        lightboxImg.src = images[currentIndex].src;
+        lightboxCaption.textContent = images[currentIndex].caption;
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateLightbox();
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateLightbox();
+    }
+
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    
+    // In RTL, "next" (left arrow) goes to next, "prev" (right arrow) goes to prev
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNext();
+    });
+    
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPrev();
+    });
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        
+        // RTL Logic
+        if (e.key === 'ArrowLeft') showNext();
+        if (e.key === 'ArrowRight') showPrev();
+    });
+
+    // Swipe gestures for touch devices
+    let startX = 0;
+    let startY = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const diffX = startX - endX;
+        const diffY = startY - endY;
+        
+        // Only trigger if horizontal swipe is dominant and significant
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                // Swipe left -> Next (in RTL terms, next image is actually showsprev? no, wait)
+                // In RTL website, the "next" button is on the left.
+                // Swiping left (diffX > 0) usually means "go to next item" in standard UX.
+                // But in RTL, let's keep it intuitive.
+                showNext();
+            } else {
+                // Swipe right -> Previous
+                showPrev();
+            }
+        } else if (Math.abs(diffY) > 100) {
+            // Swipe up/down to close
+            closeLightbox();
+        }
+    }, { passive: true });
+}
+
